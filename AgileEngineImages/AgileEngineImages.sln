@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngineImages.DataAccess", "AgileEngineImages.DataAccess\AgileEngineImages.DataAccess.csproj", "{FF72E14B-7BE6-479B-822A-BB784F453F18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEntineImages.Domain.Common", "AgileEntineImages.Domain.Common\AgileEntineImages.Domain.Common.csproj", "{FD9C55EC-0262-4FE2-B5B5-C6A9CDEA7812}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngiteImages.ApplicationServices", "AgileEngiteImages.ApplicationServices\AgileEngiteImages.ApplicationServices.csproj", "{331028E6-EBF7-4EA6-BC06-179578DDD8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngineImages.Domain", "AgileEngineImages.Domain\AgileEngineImages.Domain.csproj", "{8A9CB979-2C49-4020-AADB-C9E046A4365A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +17,13 @@ Global
 		{FF72E14B-7BE6-479B-822A-BB784F453F18}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{FF72E14B-7BE6-479B-822A-BB784F453F18}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{FF72E14B-7BE6-479B-822A-BB784F453F18}.Release|anycpu.Build.0 = Release|Any CPU
-		{FD9C55EC-0262-4FE2-B5B5-C6A9CDEA7812}.Debug|anycpu.ActiveCfg = Debug|Any CPU
-		{FD9C55EC-0262-4FE2-B5B5-C6A9CDEA7812}.Debug|anycpu.Build.0 = Debug|Any CPU
-		{FD9C55EC-0262-4FE2-B5B5-C6A9CDEA7812}.Release|anycpu.ActiveCfg = Release|Any CPU
-		{FD9C55EC-0262-4FE2-B5B5-C6A9CDEA7812}.Release|anycpu.Build.0 = Release|Any CPU
+		{331028E6-EBF7-4EA6-BC06-179578DDD8BE}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{331028E6-EBF7-4EA6-BC06-179578DDD8BE}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{331028E6-EBF7-4EA6-BC06-179578DDD8BE}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{331028E6-EBF7-4EA6-BC06-179578DDD8BE}.Release|anycpu.Build.0 = Release|Any CPU
+		{8A9CB979-2C49-4020-AADB-C9E046A4365A}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{8A9CB979-2C49-4020-AADB-C9E046A4365A}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{8A9CB979-2C49-4020-AADB-C9E046A4365A}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{8A9CB979-2C49-4020-AADB-C9E046A4365A}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

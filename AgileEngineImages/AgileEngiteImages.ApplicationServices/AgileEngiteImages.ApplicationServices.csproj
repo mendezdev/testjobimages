@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgileEngineImages.DataAccess\AgileEngineImages.DataAccess.csproj" />
+    <ProjectReference Include="..\AgileEngineImages.Domain\AgileEngineImages.Domain.csproj" />
+  </ItemGroup>
+</Project>
