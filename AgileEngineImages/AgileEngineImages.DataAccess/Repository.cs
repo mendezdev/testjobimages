@@ -9,6 +9,11 @@ namespace AgileEngineImages.DataAccess
     {
         private readonly IDistributedCache _cache;
 
+        public Repository(IDistributedCache cache)
+        {
+            _cache = cache;
+        }
+
         public virtual Task<byte[]> Get(string key)
         {
             return _cache.GetAsync(key);

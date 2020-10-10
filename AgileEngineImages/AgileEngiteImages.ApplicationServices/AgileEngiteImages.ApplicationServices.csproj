@@ -7,5 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AgileEngineImages.DataAccess\AgileEngineImages.DataAccess.csproj" />
     <ProjectReference Include="..\AgileEngineImages.Domain\AgileEngineImages.Domain.csproj" />
+    <ProjectReference Include="..\AgileEngineImages.Common\AgileEngineImages.Common.csproj" />
   </ItemGroup>
 </Project>
