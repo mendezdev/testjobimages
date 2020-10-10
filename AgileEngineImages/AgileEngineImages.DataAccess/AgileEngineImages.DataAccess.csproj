@@ -8,4 +8,8 @@
     <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
     <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileEngineImages.Domain\AgileEngineImages.Domain.csproj" />
+    <ProjectReference Include="..\AgileEngineImages.Domain.Common\AgileEngineImages.Domain.Common.csproj" />
+  </ItemGroup>
 </Project>

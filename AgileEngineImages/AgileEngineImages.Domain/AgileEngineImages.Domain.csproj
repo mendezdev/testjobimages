@@ -7,4 +7,7 @@
   <ItemGroup>
     <Folder Include="Entities\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileEngineImages.Domain.Common\AgileEngineImages.Domain.Common.csproj" />
+  </ItemGroup>
 </Project>

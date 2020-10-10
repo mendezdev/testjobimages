@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Text.Json.Serialization;
+using AgileEngineImages.Domain.Common;
 
 namespace AgileEngineImages.Domain.Entities
 {
-    public class Image
+    public class Image : BaseEntityModel<Image>
     {
-        public string Id { get; set; }
         public string Author { get; set; }
         public string Tags { get; set; }
         [JsonPropertyName("cropped_picture")]
