@@ -12,20 +12,18 @@ namespace AgileEngineImages.WebAPI.Controllers
     [Route("api/[controller]")]
     public class ImagesController : Controller
     {
-        private readonly ImageService _imageService;
         private readonly AgileEngineService _agileEngineService;
 
-        public ImagesController(ImageService imageService, AgileEngineService agileEngineService)
+        public ImagesController(AgileEngineService agileEngineService)
         {
-            _imageService = imageService;
             _agileEngineService = agileEngineService;
         }
 
         // GET: api/values
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]int page)
         {
-            var images = await _agileEngineService.GetImages();
+            var images = await _agileEngineService.GetImages(page);
             return Ok(images);
         }
 
@@ -40,18 +38,6 @@ namespace AgileEngineImages.WebAPI.Controllers
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
         {
         }
     }

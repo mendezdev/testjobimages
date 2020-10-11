@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AgileEngineImages.DataAccess;
 using AgileEngiteImages.ApplicationServices;
+using AgileEngiteImages.ApplicationServices.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,7 @@ namespace AgileEngineImages.WebAPI
 
             services.AddSingleton(mongo.GetDatabase("AgileEngineDatabase"));
             services.AddSingleton(BuildHttpClient());
+            services.AddSingleton(BuildAuthConfig());
             services.AddScoped<ImageRepository>();
             services.AddScoped<ImageService>();
             services.AddScoped<AgileEngineService>();
@@ -73,6 +75,15 @@ namespace AgileEngineImages.WebAPI
             }
 
             return httpClient;
+        }
+
+        private AuthConfig BuildAuthConfig()
+        {
+            return new AuthConfig
+            {
+                APIKey = Configuration.GetValue<string>("ApiKey"),
+                BaseUri = Configuration.GetValue<string>("AgileEngineBaseUri")
+            };
         }
     }
 }
