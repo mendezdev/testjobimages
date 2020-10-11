@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngineImages.Common", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngineImages.Domain.Common", "AgileEngineImages.Domain.Common\AgileEngineImages.Domain.Common.csproj", "{015A8FE7-D7EB-4FA6-96B6-1AE0C6CBCB37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileEngineImages.WebAPI", "AgileEngineImages.WebAPI\AgileEngineImages.WebAPI.csproj", "{86AFD5E6-FB75-426D-9C9F-5741CC534244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -37,5 +39,9 @@ Global
 		{015A8FE7-D7EB-4FA6-96B6-1AE0C6CBCB37}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{015A8FE7-D7EB-4FA6-96B6-1AE0C6CBCB37}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{015A8FE7-D7EB-4FA6-96B6-1AE0C6CBCB37}.Release|anycpu.Build.0 = Release|Any CPU
+		{86AFD5E6-FB75-426D-9C9F-5741CC534244}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{86AFD5E6-FB75-426D-9C9F-5741CC534244}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{86AFD5E6-FB75-426D-9C9F-5741CC534244}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{86AFD5E6-FB75-426D-9C9F-5741CC534244}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

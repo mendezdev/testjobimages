@@ -9,4 +9,7 @@
     <ProjectReference Include="..\AgileEngineImages.Domain\AgileEngineImages.Domain.csproj" />
     <ProjectReference Include="..\AgileEngineImages.Common\AgileEngineImages.Common.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AgileEngineImages.Domain.Common\AgileEngineImages.Domain.Common.csproj" />

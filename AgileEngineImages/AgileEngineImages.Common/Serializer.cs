@@ -4,9 +4,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AgileEngineImages.Common
 {
-    public class Serializer<T> where T : class
+    public static class Serializer<T> where T : class
     {
-        public byte[] Serialize(T entity)
+        public static byte[] Serialize(T entity)
         {
             if (entity == null)
             {
@@ -19,7 +19,7 @@ namespace AgileEngineImages.Common
             return ms.ToArray();
         }
 
-        public T Deserialize(byte[] arrBytes)
+        public static T Deserialize(byte[] arrBytes)
         {
             MemoryStream ms = new MemoryStream();
             BinaryFormatter bf = new BinaryFormatter();
