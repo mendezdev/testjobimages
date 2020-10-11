@@ -1,5 +1,4 @@
-﻿using System;
-namespace AgileEngiteImages.ApplicationServices.Config
+﻿namespace AgileEngiteImages.ApplicationServices.Config
 {
     public class AuthConfig
     {

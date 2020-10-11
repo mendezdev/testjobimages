@@ -1,10 +1,8 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using AgileEngineImages.Common;
 using AgileEngineImages.Domain.DTO;
 using AgileEngineImages.Domain.Entities;
 using AgileEngiteImages.ApplicationServices.Config;

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AgileEngineImages.DataAccess;
 using AgileEngineImages.Domain.Entities;
 
@@ -21,6 +22,15 @@ namespace AgileEngiteImages.ApplicationServices
         public virtual Task<Image> Get(string id)
         {
             return _imageRepository.GetByIdAsync(id);
+        }
+
+        public virtual Task<List<Image>> Search(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                return Task.FromResult(new List<Image>());
+            }
+            return _imageRepository.Search(searchTerm);
         }
     }
 }

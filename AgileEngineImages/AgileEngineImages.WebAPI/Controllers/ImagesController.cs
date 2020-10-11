@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AgileEngiteImages.ApplicationServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +10,12 @@ namespace AgileEngineImages.WebAPI.Controllers
     public class ImagesController : Controller
     {
         private readonly AgileEngineService _agileEngineService;
+        private readonly ImageService _imageService;
 
-        public ImagesController(AgileEngineService agileEngineService)
+        public ImagesController(AgileEngineService agileEngineService, ImageService imageService)
         {
             _agileEngineService = agileEngineService;
+            _imageService = imageService;
         }
 
         // GET: api/values
@@ -35,10 +34,16 @@ namespace AgileEngineImages.WebAPI.Controllers
             return Ok(image);
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpGet]
+        [Route("search/{searchTerms}")]
+        public async Task<IActionResult> Search(string searchTerms)
         {
+            if (string.IsNullOrEmpty(searchTerms))
+            {
+                return NoContent();
+            }
+            return Ok(await _imageService.Search(searchTerms));
         }
+
     }
 }
