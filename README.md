@@ -15,7 +15,7 @@ You can hit the API on `https://localhost:9697`:
 
 - No logic for improved for `/search` endpoint.
 
-## Ideas
+## Last words
 - I couldn't go more deeper because time restriction but it could be much better
 
 Thank you so much for the opportunity!
