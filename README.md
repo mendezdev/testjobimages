@@ -1,5 +1,5 @@
 # Agile Engine Job test
-Test job for AgileEngine
+Test job for AgileEngine.
 
 ## How to run it
 Download MongoDB and install it with default credentials because the project use ir as it is.
@@ -16,6 +16,6 @@ You can hit the API on `https://localhost:9697`:
 - No logic for improved for `/search` endpoint.
 
 ## Last words
-- I couldn't go more deeper because time restriction but it could be much better
+I couldn't go more deeper because time restriction but it could be much better.
 
 Thank you so much for the opportunity!
