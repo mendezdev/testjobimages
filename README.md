@@ -4,7 +4,11 @@ Test job for AgileEngine.
 ## How to run it
 Download MongoDB and install it with default credentials because the project use ir as it is.
 
-You can hit the API on `https://localhost:9697`: 
+Open solution with VS, build and press run button :D
+
+It will run the API on `https://localhost:9697`
+
+You can use the following endpoints: 
 - `/api/images`
 - `/api/images?page={pageNumber}`
 - `/api/images/{id}`
