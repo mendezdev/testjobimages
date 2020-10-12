@@ -12,7 +12,12 @@ namespace AgileEngineImages.DataAccess
         //TODO: improved this search, I tried but couldn't because of limit time --> sorry :(
         public virtual Task<List<Image>> Search(string searchTerm)
         {
-            return Collection.Find(p => p.Author == searchTerm || p.Tags == searchTerm || p.Camera == searchTerm || p.CroppedPicture == searchTerm || p.FullPicture == searchTerm).ToListAsync();
+            return Collection.Find(
+                p => p.Author == searchTerm ||
+                p.Tags.Contains(searchTerm) ||
+                p.Camera == searchTerm ||
+                p.CroppedPicture == searchTerm ||
+                p.FullPicture == searchTerm).ToListAsync();
         }
     }
 }

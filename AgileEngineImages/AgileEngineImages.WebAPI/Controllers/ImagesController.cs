@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AgileEngiteImages.ApplicationServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,14 +36,10 @@ namespace AgileEngineImages.WebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("search/{searchTerms}")]
-        public async Task<IActionResult> Search(string searchTerms)
+        [Route("search/{searchTerm}")]
+        public async Task<IActionResult> Search(string searchTerm)
         {
-            if (string.IsNullOrEmpty(searchTerms))
-            {
-                return NoContent();
-            }
-            return Ok(await _imageService.Search(searchTerms));
+            return Ok(await _imageService.Search(searchTerm));
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -6,6 +7,8 @@ using System.Threading.Tasks;
 using AgileEngineImages.Domain.DTO;
 using AgileEngineImages.Domain.Entities;
 using AgileEngiteImages.ApplicationServices.Config;
+using AgileEngiteImages.ApplicationServices.DTO;
+using AgileEngiteImages.ApplicationServices.Mappers;
 using Newtonsoft.Json;
 
 namespace AgileEngiteImages.ApplicationServices
@@ -15,12 +18,18 @@ namespace AgileEngiteImages.ApplicationServices
         private readonly ImageService _imageService;
         private readonly HttpClient _httpClient;
         private readonly AuthConfig _authConfig;
+        private readonly IMapper<Image, ImageResponseDto> _imageMapper;
 
-        public AgileEngineService(HttpClient httpClient, AuthConfig authConfig, ImageService imageService)
+        public AgileEngineService(
+            HttpClient httpClient,
+            AuthConfig authConfig,
+            ImageService imageService,
+            IMapper<Image, ImageResponseDto> imageMapper)
         {
             _httpClient = httpClient;
             _authConfig = authConfig;
             _imageService = imageService;
+            _imageMapper = imageMapper;
         }
 
         public virtual async Task<ImagePagination> GetImages(int page)
@@ -51,9 +60,10 @@ namespace AgileEngiteImages.ApplicationServices
                     return await GetImageByIdAsync(id);
                 case HttpStatusCode.OK:
                     string content = await response.Content.ReadAsStringAsync();
-                    var imageResult = JsonConvert.DeserializeObject<Image>(content);
-                    await _imageService.Store(imageResult);
-                    return imageResult;
+                    var imageResult = JsonConvert.DeserializeObject<ImageResponseDto>(content);
+                    var image = _imageMapper.From(imageResult);
+                    await _imageService.Store(image);
+                    return image;
                 default:
                     return null;
             }
