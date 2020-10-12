@@ -5,8 +5,11 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AgileEngineImages.DataAccess;
+using AgileEngineImages.Domain.Entities;
 using AgileEngiteImages.ApplicationServices;
 using AgileEngiteImages.ApplicationServices.Config;
+using AgileEngiteImages.ApplicationServices.DTO;
+using AgileEngiteImages.ApplicationServices.Mappers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,6 +42,7 @@ namespace AgileEngineImages.WebAPI
             services.AddScoped<ImageRepository>();
             services.AddScoped<ImageService>();
             services.AddScoped<AgileEngineService>();
+            services.AddScoped<IMapper<Image, ImageResponseDto>, ImageMapper>();
             services.AddControllers();
         }
 
